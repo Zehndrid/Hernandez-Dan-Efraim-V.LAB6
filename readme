@@ -1,0 +1,44 @@
+" Merge Linked Lists"
+
+1.Introduction
+This Python program demonstrates the merging of two sorted linked lists using a stack-based approach. The linked lists are represented using a custom `Node` class and a `Stack` class.
+
+2. Classes
+2.1 `Node` Class
+- Represents a node in a linked list.
+- Contains a `data` attribute to store the node's value.
+- Contains a `next` attribute pointing to the next node in the list.
+
+2.2 `Stack` Class
+- Implements a basic stack data structure.
+- Supports operations such as `push`, `pop`, `peek`, `is_empty`, `print_stack`, and `size`.
+- Used to create and manipulate linked lists.
+
+3. Function
+3.1 `merge_sorted_lists(list1, list2)`
+- Merges two sorted linked lists into a single sorted linked list.
+- Uses stacks for merging and then reconstructs the merged list.
+
+4. Usage Example
+```python
+# create the two sorted stacks
+stack1 = Stack()
+stack1.push(5)
+stack1.push(4)
+stack1.push(2)
+stack1.push(1)
+
+stack2 = Stack()
+stack2.push(5)
+stack2.push(5)
+stack2.push(4)
+stack2.push(3)
+stack2.push(2)
+stack2.push(1)
+
+# Merge the two sorted stack
+result = merge_sorted_lists(stack1, stack2)
+
+# Print now the merged list
+print("Merged List:")
+result.print_stack()
